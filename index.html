@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Pro Framework</title>
+  <link rel="icon" href="assets/FX_logo.jpeg" type="image/jpeg" />
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: #f5f8fa; color: #2c3e50; }
+    header { background: linear-gradient(to right, #0d1b2a, #1b263b); color: white; padding: 2rem 1rem; text-align: center; }
+    header img { max-height: 70px; margin-bottom: 1rem; }
+    header h1 { margin: 0; font-size: 2rem; }
+    header p { font-size: 1.1rem; color: #ccd6f6; }
+    nav { background: #1b263b; padding: 0.5rem; text-align: center; }
+    nav a { color: #f0f0f0; text-decoration: none; margin: 0 1rem; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    section { max-width: 900px; margin: auto; padding: 2rem; background: white; margin-top: 1.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    h2 { color: #0a3871; border-left: 4px solid #4da8da; padding-left: 0.5rem; }
+    ul, ol { margin-left: 2rem; line-height: 1.6; }
+    .box { background: #eef6fc; padding: 1rem; border-left: 5px solid #4da8da; margin: 1rem 0; border-radius: 6px; }
+    footer { text-align: center; font-size: 0.9rem; color: #888; padding: 2rem; background: #f0f4f8; margin-top: 2rem; }
+    .button-bar { text-align: center; margin-top: 2rem; }
+    .button-bar a { background: #0a3871; color: white; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+    .button-bar a:hover { background: #1b4f91; }
+    form { margin-top: 2rem; }
+    input, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0 1rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+    button { background-color: #0a3871; color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+    button:hover { background-color: #1b4f91; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/FX_logo.jpeg" alt="FX Outcome-based Logo" />
+    <h1>Analytics Pro Decision Framework</h1>
+    <p>Approach incomplete or inconsistent data like a seasoned analytics consultant</p>
+  </header>
+
+  <nav>
+    <a href="#impact">Business Impact</a>
+    <a href="#audit">Data Audit</a>
+    <a href="#missing">Missingness</a>
+    <a href="#modeling">Model Choice</a>
+    <a href="#compare">Compare Models</a>
+    <a href="#uncertainty">Uncertainty</a>
+    <a href="#tools">Toolkit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="impact">
+    <h2>1. Start with Business Impact</h2>
+    <div class="box">
+      <strong>Ask:</strong> What is the goal? What decision will this drive? What error tolerance is acceptable?
+    </div>
+  </section>
+
+  <section id="audit">
+    <h2>2. Perform a Data Quality Audit</h2>
+    <ul>
+      <li>Check for missingness, outliers, stationarity, seasonality, and volume</li>
+      <li>Use tools like ADF test, box plots, and STL decomposition</li>
+    </ul>
+  </section>
+
+  <section id="missing">
+    <h2>3. Classify Missingness</h2>
+    <ul>
+      <li><strong>MCAR:</strong> Missing Completely At Random → safe to impute</li>
+      <li><strong>MAR:</strong> Missing At Random → use predictors</li>
+      <li><strong>MNAR:</strong> Not At Random → model missingness itself</li>
+    </ul>
+  </section>
+
+  <section id="modeling">
+    <h2>4. Choose the Best Correction & Model</h2>
+    <ul>
+      <li>Use KNN, spline, Kalman, Prophet, or BSTS based on data structure</li>
+      <li>Align approach with business expectations and data realism</li>
+    </ul>
+  </section>
+
+  <section id="compare">
+    <h2>5. Compare Multiple Models</h2>
+    <div class="box">
+      Benchmark against naive models using RMSE, MAPE, and cross-validation
+    </div>
+  </section>
+
+  <section id="uncertainty">
+    <h2>6. Communicate Uncertainty Transparently</h2>
+    <ul>
+      <li>Explain assumptions made</li>
+      <li>Quantify uncertainty and show what would change the outcome</li>
+    </ul>
+  </section>
+
+  <section id="tools">
+    <h2>7. Equip Yourself With the Right Toolkit</h2>
+    <ul>
+      <li>Visualization: Seaborn, Plotly</li>
+      <li>Modeling: Prophet, CausalImpact, DoWhy</li>
+      <li>Imputation: scikit-learn, fancyimpute</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <div class="button-bar">
+    <a href="https://github.com" target="_blank">View on GitHub</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Analytics Toolkit. Powered by FX Outcome-based. Built with ❤️ for data professionals.
+  </footer>
+</body>
+</html>
